@@ -1,0 +1,464 @@
+<config>
+    <tabs>
+        <zsoltnet translate="label" module="zsoltnet_ledgerinvoice">
+            <label>ZsoltNet Extensions</label>
+            <sort_order>299</sort_order>
+        </zsoltnet>
+    </tabs>
+    <sections>
+        <ledgerinvoicemodule translate="label" module="zsoltnet_ledgerinvoice">
+            <label>Ledger Invoice</label>
+            <tab>zsoltnet</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>5</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <ledgerinvoice translate="label">
+                    <label>Ledger Invoice settings</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>50</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <regcustomeridprenumber translate="label">
+                            <label>Registered CustomerID Pre Number</label>
+                            <comment>
+                            <![CDATA[A regisztrált vásárlók azonosítója innen indul.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </regcustomeridprenumber>
+                        <guestcustomeridprenumber translate="label">
+                            <label>Guest CustomerID Pre Number</label>
+                            <comment>
+                            <![CDATA[A vendégek azonosítója innen indul.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </guestcustomeridprenumber>
+                        <discountcode translate="label">
+                            <label>Discount account code</label>
+                            <comment>
+                            <![CDATA[A kedvezmény tételkódja a számlán.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </discountcode>
+                        <shippingcode translate="label">
+                            <label>Shipping account code</label>
+                            <comment>
+                            <![CDATA[A szállítás tételkódja a számlán.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </shippingcode>
+                        <codcode translate="label">
+                            <label>COD account code</label>
+                            <comment>
+                            <![CDATA[Az utánvét tételkódja a számlán.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>44</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codcode>
+                        <inpersoncode translate="label">
+                            <label>Személyes átvétel tételkódja</label>
+                            <comment>
+                            <![CDATA[A személyes átvétel tételkódja a számlán.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>45</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </inpersoncode>
+                        <bpiocode translate="label">
+                            <label>Bank Payment in Office code</label>
+                            <comment>
+                            <![CDATA[A bankfiókban befizetés tételkódja a számlán.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>50</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bpiocode>
+                        <inpersonshippingmethod translate="label">
+                            <label>Személyes átvétel szállítási metódus</label>
+                            <comment>
+                            <![CDATA[A személyes átvétel szállítási metódusa az áruházban.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>60</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </inpersonshippingmethod>
+                        <tax_5 translate="label">
+                            <label>5%-os ÁFA-kódja</label>
+                            <comment>
+                            <![CDATA[A fizetendő 5%-os ÁFA kódja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>70</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_5>
+                        <tax_18 translate="label">
+                            <label>18%-os ÁFA-kódja</label>
+                            <comment>
+                            <![CDATA[A fizetendő 18%-os ÁFA kódja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>80</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_18>
+                        <tax_25 translate="label">
+                            <label>25%-os ÁFA-kódja</label>
+                            <comment>
+                            <![CDATA[A fizetendő 25%-os ÁFA kódja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>90</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_25>
+                        <tax_27 translate="label">
+                            <label>27%-os ÁFA-kódja</label>
+                            <comment>
+                            <![CDATA[A fizetendő 27%-os ÁFA kódja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>95</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_27>
+                        <tax_mentes translate="label">
+                            <label>adómentes ÁFA-kódja</label>
+                            <comment>
+                            <![CDATA[Az adómentes ÁFA kódja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>100</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tax_mentes>
+                        <coddue translate="label">
+                            <label>COD due time</label>
+                            <comment>
+                            <![CDATA[Utánvétel esetén az esedékesség (fizetési határidő) ennyi nap.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>110</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </coddue>
+                        <codtrans translate="label">
+                            <label>COD trans time</label>
+                            <comment>
+                            <![CDATA[Utánvétel esetén a teljesítés ennyi nap a kiállításhoz képest.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codtrans>
+                        <enableimport translate="label">
+                            <label>Enable manual import</label>
+                            <comment>
+                            <![CDATA[Számlakészítés előtt kézzel lehet-e importálni a vásárló adatait a Ledgerbe. Külön gomb van erre a Magentóban. Céges partnereknél hasznos, mert az első számla előtt a Ledgerben be lehet nekik állítani pl. más teljesítési dátumot, stb.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enableimport>
+                        <enableimport4service translate="label">
+                            <label>Automatikus szolgáltatásimport engedélyezése</label>
+                            <comment>
+                            <![CDATA[Automatikusan importálódjon át a Magentóból a Ledgerben nem létező szolgáltatás.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>140</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enableimport4service>
+                        <importregistered translate="label">
+                            <label>Import registered customers only</label>
+                            <comment>
+                            <![CDATA[A kézi importálás engedélyezése csak a regisztrált vásárlókra. Vendégek esetén az importálás nem biztos, hogy felmerül.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>150</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </importregistered>
+                        <taximport translate="label">
+                            <label>Alap ÁFA-osztályok beállítása a felhasználó importálásakor</label>
+                            <comment>
+                            <![CDATA[Ezek az ÁFA-osztályok lesznek beállítva a felhasználónak importálás után. Százalék nélkül kell megadni, vesszővel elválasztva.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>160</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </taximport>
+                        <taximport4service translate="label">
+                            <label>ÁFA-osztály beállítása szolgáltatás importálásakor</label>
+                            <comment>
+                            <![CDATA[Ezen ÁFA-osztállyal lesz beimportálva új szolgáltatás. Százalék nélkül kell megadni.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>170</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </taximport4service>
+                        <vtsz translate="label">
+                            <label>VTSZ/SZJ szám szolgáltatás importálásakor</label>
+                            <comment>
+                            <![CDATA[Ezen VTSZ/SZJ számmal lesz beimportálva új szolgáltatás.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>180</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </vtsz>
+                        <importEmail translate="label">
+                            <label>Import e-mail</label>
+                            <comment>
+                            <![CDATA[E-mail cím importálása.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>190</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </importEmail>
+                        <importPhone translate="label">
+                            <label>Import phone and fax number</label>
+                            <comment>
+                            <![CDATA[Telefon, fax importálása.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>200</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </importPhone>
+                        <hostname translate="label">
+                            <label>Ledger Hostname</label>
+                            <comment>
+                            <![CDATA[A Ledgert futtató kiszolgáló neve.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>210</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </hostname>
+                        <context translate="label">
+                            <label>Ledger Context</label>
+                            <comment>
+                            <![CDATA[Pl. <em>http://ledger.szerver.hu/ledger/</em> esetén a <em>/ledger/</em>.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>220</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </context>
+                        <timeout translate="label">
+                            <label>Ledger Server Timeout (minute)</label>
+                            <comment>
+                            <![CDATA[Ennyi idő után jár le a session Ledger-kiszolgálón. A modul automatikus újból beléptet.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>230</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </timeout>
+                        <username translate="label">
+                            <label>Ledger Username</label>
+                            <comment>
+                            <![CDATA[Ennek a felhasználónak a nevében készíti a számlákat a modul.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>240</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </username>
+                        <password translate="label">
+                            <label>Ledger Password</label>
+                            <comment>
+                            <![CDATA[A felhasználó jelszava.]]>
+                            </comment>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>250</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </password>
+                        <useragent translate="label">
+                            <label>Ledger User Agent</label>
+                            <comment>
+                            <![CDATA[A modul ilyen <em>User Agent</em>ként azonosítja magát a Ledger webes felülete felé.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>260</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </useragent>
+                        <footer translate="label">
+                            <label>Footer</label>
+                            <comment>
+                            <![CDATA[A számla lébléce.]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>265</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </footer>
+                        <dbusername translate="label">
+                            <label>Ledger DB Username</label>
+                            <comment>
+                            <![CDATA[Az adatbázis felhasználói neve.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>270</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dbusername>
+                        <dbpassword translate="label">
+                            <label>Ledger DB Password</label>
+                            <frontend_type>password</frontend_type>
+                            <sort_order>280</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dbpassword>
+                        <dbdb translate="label">
+                            <label>Ledger DB Name</label>
+                            <comment>
+                            <![CDATA[A Ledger-adatbázis neve.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>290</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dbdb>
+                        <dbhost translate="label">
+                            <label>Ledger DB Host Name/IP</label>
+                            <comment>
+                            <![CDATA[A Ledger-adatbázist futtató hoszt neve vagy IP-címe (localhost is lehet a név).]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>300</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dbhost>
+                        <dbport translate="label">
+                            <label>Ledger DB Port</label>
+                            <comment>
+                            <![CDATA[A Ledger-adatbázis portja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>310</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </dbport>
+                        <charset translate="label">
+                            <label>Characterset</label>
+                            <comment>
+                            <![CDATA[A Ledger által használt kódlap. Latin2-es (ISO-8859-2) beállítás esetén a modul konvertálja a szövegeket az UTF-8-as Magento és a Ledger között.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>ledgerinvoice/system_config_source_charset</source_model>
+                            <sort_order>320</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </charset>
+                        <tmpdir translate="label">
+                            <label>Temporary directory</label>
+                            <comment>
+                            <![CDATA[A modul munkakönyvtára. Tipikusan valami temp-könyvtár alkönyvtára, ahová szemetelhet. A debug logot is ide rakja.]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>330</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </tmpdir>
+                        <debug translate="label">
+                            <label>Debug</label>
+                            <comment>
+                            <![CDATA[Hibakeresés üzemmód bekapcsolása.]]>
+                            </comment>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_enabledisable</source_model>
+                            <sort_order>340</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </debug>
+                        <bankcard translate="label">
+                            <label>Bankcard payments</label>
+                            <comment>
+                            <![CDATA[Bankkártyás fizetés(ek) azonosítása a Magentóban. Az ilyen fizetéseket kezeli a modul bankkártyás fizetésként.]]>
+                            </comment>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>350</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </bankcard>
+                    </fields>
+               </ledgerinvoice>
+           </groups>
+        </ledgerinvoicemodule>
+    </sections>
+</config>

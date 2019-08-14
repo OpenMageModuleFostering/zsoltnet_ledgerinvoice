@@ -1,0 +1,133 @@
+<?xml version="1.0"?>
+<package>
+    <name>ZsoltNet_LedgerInvoice</name>
+    <version>0.9.3</version>
+    <stability>stable</stability>
+    <license uri="http://opensource.org/licenses/osl-3.0.php">Open Software License (OSL)</license>
+    <channel>community</channel>
+    <extends/>
+    <summary>This extension connects the Ledger ERP software of T&#xE1;v&#xFC;gyvitel Kft. (http://www.tavugyvitel.hu/) to the Magento Commerce webshop. The Ledger ERP software is a Hungarian software, so details are in Hungarian only.&#xD;
+&#xD;
+Ez a kiterjeszt&#xE9;s a T&#xE1;v&#xFC;gyvitel Kft. (http://www.tavugyvitel.hu/) &#xE1;ltal forgalmazott Ledger integr&#xE1;lt &#xFC;gyviteli szoftver &#xE9;s a Magento Commerce webshop &#xF6;sszekapcsol&#xE1;s&#xE1;ra szolg&#xE1;l.</summary>
+    <description>This extension connects the Ledger ERP software of T&#xE1;v&#xFC;gyvitel Kft. (http://www.tavugyvitel.hu/) to the Magento Commerce webshop.  The Ledger ERP software is a Hungarian software, so details are in Hungarian only.&#xD;
+&#xD;
+Ez a Magento-kiterjeszt&#xE9;s a T&#xE1;v&#xFC;gyvitel Kft. (http://www.tavugyvitel.hu/) &#xE1;ltal forgalmazott Ledger integr&#xE1;lt &#xFC;gyviteli szoftver &#xE9;s a Magento Commerce webshop &#xF6;sszekapcsol&#xE1;s&#xE1;ra szolg&#xE1;l.&#xD;
+&#xD;
+&#xD;
+Tulajdons&#xE1;gok&#xD;
+&#xD;
+* teljesen elrejti a Ledgert a h&#xE1;tt&#xE9;rben&#xD;
+* banki el&#x151;reutal&#xE1;sos (magento-community/BankPayment) fizet&#xE9;sek kezel&#xE9;se&#xD;
+* ut&#xE1;nv&#xE9;teles (magento-community/CashOnDelivery) fizet&#xE9;sek kezel&#xE9;se&#xD;
+* bankk&#xE1;rty&#xE1;s fizet&#xE9;sek kezel&#xE9;se (PayPal, CIB, stb.)&#xD;
+* kedvezm&#xE9;nyek kezel&#xE9;se&#xD;
+* v&#xE1;s&#xE1;rl&#xF3;k adatainak automatikus illetve k&#xE9;zi import&#xE1;l&#xE1;sa a Magent&#xF3;b&#xF3;l (regisztr&#xE1;lt v&#xE1;s&#xE1;rl&#xF3;, vend&#xE9;g v&#xE1;s&#xE1;rl&#xF3;)&#xD;
+* &#xE1;ruk &#xE1;rainak, sz&#xE1;ll&#xED;t&#xE1;si k&#xF6;lts&#xE9;gek automatikus import&#xE1;l&#xE1;sa a Magent&#xF3;b&#xF3;l&#xD;
+* sz&#xE1;mla d&#xE1;tumainak automatikus kezel&#xE9;se (k&#xE1;rty&#xE1;s fizet&#xE9;s, el&#x151;reutal&#xE1;s eset&#xE9;n a be&#xE9;rkez&#xE9;s d&#xE1;tuma a teljes&#xED;t&#xE9;s d&#xE1;tuma)&#xD;
+* viszontelad&#xF3;k eset&#xE9;n a Ledgerben be&#xE1;ll&#xED;tott fizet&#xE9;si hat&#xE1;rid&#x151; kezel&#xE9;se a sz&#xE1;ml&#xE1;n&#xD;
+* t&#xF6;bb sz&#xE1;mla nyomtat&#xE1;sa egyszerre (mass print)&#xD;
+&#xD;
+Konfigur&#xE1;l&#xE1;s&#xD;
+&#xD;
+A kiterjeszt&#xE9;s be&#xE1;ll&#xED;t&#xE1;sai a "Rendszer &gt; Be&#xE1;ll&#xED;t&#xE1;sok &gt; Avonleamedia Extensions &gt; Ledger Invoice" oldalon tal&#xE1;lhat&#xF3;ak. &#xD;
+Ezek a k&#xF6;vetkez&#x151;k:&#xD;
+&#xD;
+* Regisztr&#xE1;lt v&#xE1;s&#xE1;rl&#xF3; el&#x151;t&#xE9;t sz&#xE1;ma -&gt; Import&#xE1;l&#xE1;sn&#xE1;l a regisztr&#xE1;lt v&#xE1;s&#xE1;rl&#xF3;k ledgerbeli azonos&#xED;t&#xF3;j&#xE1;nak k&#xE9;pz&#xE9;s&#xE9;re szolg&#xE1;l. A Magent&#xF3;ban 1-es azonos&#xED;t&#xF3;j&#xFA; v&#xE1;s&#xE1;rl&#xF3; a Ledgerben ezen sz&#xE1;m+1-es azonos&#xED;t&#xF3;t kap. Pl. 100000+1=100001&#xD;
+&#xD;
+* Vend&#xE9;g v&#xE1;s&#xE1;rl&#xF3; el&#x151;t&#xE9;t sz&#xE1;ma -&gt; Import&#xE1;l&#xE1;sn&#xE1;l a vend&#xE9;g v&#xE1;s&#xE1;rl&#xF3;k ledgerbeli azonos&#xED;t&#xF3;j&#xE1;nak k&#xE9;pz&#xE9;s&#xE9;re szolg&#xE1;l.  A Magent&#xF3;ban 2-es rendel&#xE9;si azonos&#xED;t&#xF3;j&#xFA; vend&#xE9;g v&#xE1;s&#xE1;rl&#xF3; a Ledgerben ezen sz&#xE1;m+2-es azonos&#xED;t&#xF3;t kap. Pl. 500000+2=500002&#xD;
+&#xD;
+* Kedvezm&#xE9;ny t&#xE9;telk&#xF3;dja -&gt; Ledgerben ilyen k&#xF3;ddal kell r&#xF6;gz&#xED;teni a kedvezm&#xE9;nyt, mint szolg&#xE1;ltat&#xE1;s. Pl. 000000&#xD;
+&#xD;
+* Sz&#xE1;ll&#xED;t&#xE1;s t&#xE9;telk&#xF3;dja -&gt; Ledgerben ilyen k&#xF3;ddal kell r&#xF6;gz&#xED;teni a sz&#xE1;ll&#xED;t&#xE1;st, mint szolg&#xE1;ltat&#xE1;s. Pl. 000001&#xD;
+&#xD;
+* Ut&#xE1;nv&#xE9;t t&#xE9;telk&#xF3;dja -&gt; Ledgerben ilyen k&#xF3;ddal kell r&#xF6;gz&#xED;teni az ut&#xE1;nv&#xE9;teles fizet&#xE9;st, mint szolg&#xE1;ltat&#xE1;s. Az ut&#xE1;nv&#xE9;telnek tipikusan extra k&#xF6;lts&#xE9;ge van, ennek sz&#xE1;ml&#xE1;z&#xE1;s&#xE1;ra szolg&#xE1;l ez a t&#xE9;tel. Pl. 000002&#xD;
+&#xD;
+* Szem&#xE9;lyes &#xE1;tv&#xE9;tel t&#xE9;telk&#xF3;dja -&gt; Ledgerben ilyen k&#xF3;ddal kell r&#xF6;gz&#xED;teni a szem&#xE9;lyes &#xE1;tv&#xE9;tel kezel&#xE9;si k&#xF6;lts&#xE9;g&#xE9;t, mint szolg&#xE1;ltat&#xE1;s. A szem&#xE9;lyes &#xE1;tv&#xE9;teln&#xE9;l lehet kezel&#xE9;si k&#xF6;lts&#xE9;g, ennek sz&#xE1;ml&#xE1;z&#xE1;s&#xE1;ra szolg&#xE1;l ez a t&#xE9;tel. Pl. 000004&#xD;
+&#xD;
+* Bankfi&#xF3;kban befizet&#xE9;s t&#xE9;telk&#xF3;dja -&gt; Ledgerben ilyen k&#xF3;ddal kell r&#xF6;gz&#xED;teni a bankfi&#xF3;kos befizet&#xE9;s d&#xED;j&#xE1;t, mint szolg&#xE1;ltat&#xE1;s. Ha az &#xFC;gyf&#xE9;l bankfi&#xF3;kban fizeti be a rendel&#xE9;s &#xE9;rt&#xE9;k&#xE9;t banki &#xE1;tutal&#xE1;s helyett, a bank levonhat k&#xF6;lts&#xE9;get, ennek sz&#xE1;ml&#xE1;z&#xE1;s&#xE1;ra szolg&#xE1;l ez a t&#xE9;tel. Pl. 000005&#xD;
+&#xD;
+* Szem&#xE9;lyes &#xE1;tv&#xE9;tel sz&#xE1;ll&#xED;t&#xE1;si met&#xF3;dus -&gt; A Magent&#xF3;ban ez a sz&#xE1;ll&#xED;t&#xE1;si modul jelenti a szem&#xE9;lyes &#xE1;tv&#xE9;telt. Pl. flatrate_flatrate&#xD;
+&#xD;
+* A fizetend&#x151; 5%-os &#xC1;FA-k&#xF3;dja -&gt; Ilyen k&#xF3;ddal van r&#xF6;gz&#xED;tve a fizetend&#x151; &#xC1;FA a Ledgerben. Pl. 4672&#xD;
+&#xD;
+* A fizetend&#x151; 18%-os &#xC1;FA-k&#xF3;dja -&gt; Ilyen k&#xF3;ddal van r&#xF6;gz&#xED;tve a fizetend&#x151; &#xC1;FA a Ledgerben. Pl. 4674&#xD;
+&#xD;
+* A fizetend&#x151; 25%-os &#xC1;FA-k&#xF3;dja -&gt; Ilyen k&#xF3;ddal van r&#xF6;gz&#xED;tve a fizetend&#x151; &#xC1;FA a Ledgerben. Pl. 4671&#xD;
+&#xD;
+* A fizetend&#x151; 27%-os &#xC1;FA-k&#xF3;dja -&gt; Ilyen k&#xF3;ddal van r&#xF6;gz&#xED;tve a fizetend&#x151; &#xC1;FA a Ledgerben. Pl. 4675&#xD;
+&#xD;
+* Az ad&#xF3;mentes &#xC1;FA-k&#xF3;dja -&gt; Ilyen k&#xF3;ddal van r&#xF6;gz&#xED;tve az ad&#xF3;mentes &#xC1;FA a Ledgerben. Pl. 4673&#xD;
+&#xD;
+* Ut&#xE1;nv&#xE9;tel esed&#xE9;kess&#xE9;g -&gt; Ut&#xE1;nv&#xE9;tel eset&#xE9;n az esed&#xE9;kess&#xE9;g d&#xE1;tuma (fizet&#xE9;si hat&#xE1;rid&#x151;) ennyi nappal k&#xE9;s&#x151;bbre lesz be&#xE1;ll&#xED;tva a sz&#xE1;mla ki&#xE1;ll&#xED;t&#xE1;s&#xE1;hoz k&#xE9;pest.&#xD;
+&#xD;
+* Ut&#xE1;nv&#xE9;tel teljes&#xED;t&#xE9;s -&gt; Ut&#xE1;nv&#xE9;tel eset&#xE9;n a teljes&#xED;t&#xE9;s d&#xE1;tuma ennyi nappal k&#xE9;s&#x151;bbre lesz be&#xE1;ll&#xED;tva a sz&#xE1;mla ki&#xE1;ll&#xED;t&#xE1;s&#xE1;hoz k&#xE9;pest.&#xD;
+&#xD;
+* K&#xE9;zi import&#xE1;l&#xE1;s enged&#xE9;lyez&#xE9;se -&gt; Ha ez be van kapcsolva, akkor lehet&#x151;s&#xE9;g van a rendel&#xE9;s adatlapj&#xE1;n a rendel&#x151; v&#xE1;s&#xE1;rl&#xF3; adatait "k&#xE9;zzel" import&#xE1;lni. Azaz a v&#xE1;s&#xE1;rl&#xF3; adatai beimport&#xE1;l&#xE1;sra ker&#xFC;lnek a Ledger adatb&#xE1;zis&#xE1;ba, ott szerkeszthet&#x151;ek, pl. tetsz&#x151;leges fizet&#xE9;si hat&#xE1;rid&#x151; adhat&#xF3; meg (esetleg megjegyz&#xE9;s, egy&#xE9;b f&#x171;zhet&#x151; a vev&#x151;h&#xF6;z a Ledgerben).  A k&#xE9;zi import&#xE1;l&#xE1;snak akkor van jelent&#x151;s&#xE9;ge, &#xE9;rtelme,ha a web&#xE1;ruh&#xE1;z nem csak v&#xE9;gfelhaszn&#xE1;l&#xF3;kat szolg&#xE1;l ki, hanem pl. viszontelad&#xF3;kat, akikn&#xE9;l k&#xFC;l&#xF6;nb&#xF6;z&#x151; fizet&#xE9;si hat&#xE1;rid&#x151;k vannak meghat&#xE1;rozva. Ezeket a hat&#xE1;rid&#x151;ket a web&#xE1;ruh&#xE1;zon k&#xED;v&#xFC;l, a Ledger admin fel&#xFC;let&#xE9;n  lehet k&#xE9;zi import&#xE1;l&#xE1;s ut&#xE1;n be&#xE1;ll&#xED;tani. Kiskereskedelmi forgalom eset&#xE9;n a k&#xE9;zi import&#xE1;l&#xE1;s felesleges funkci&#xF3;, a kiterjeszt&#xE9;s az import&#xE1;l&#xE1;st automatikusan elv&#xE9;gzi a sz&#xE1;mla ki&#xE1;ll&#xED;t&#xE1;sa el&#x151;tt, a d&#xE1;tumokat is automatikusan be&#xE1;ll&#xED;tja a sz&#xE1;ml&#xE1;n, &#xED;gy a funkci&#xF3; alapb&#xF3;l ki is van kapcsolva. A fizet&#xE9;si hat&#xE1;rid&#x151; (esed&#xE9;kess&#xE9;g) ut&#xE1;nv&#xE9;tel eset&#xE9;n a modul (fenti kett&#x151;) param&#xE9;tere alapj&#xE1;n ker&#xFC;l kisz&#xE1;m&#xED;t&#xE1;sra, bankk&#xE1;rty&#xE1;s fizet&#xE9;s, el&#x151;re utal&#xE1;s eset&#xE9;n a sz&#xE1;mla ki&#xE1;ll&#xED;t&#xE1;s&#xE1;nak d&#xE1;tum&#xE1;val egyenl&#x151;. Egyed&#xFC;l az ut&#xF3;lagos utal&#xE1;s (tipikusan viszontelad&#xF3; partnerek fizetnek &#xED;gy) eset&#xE9;n sz&#xE1;m&#xED;t a Ledgerben be&#xE1;ll&#xED;tott hat&#xE1;rid&#x151;.&#xD;
+&#xD;
+* Automatikus szolg&#xE1;ltat&#xE1;simport enged&#xE9;lyez&#xE9;se -&gt; Ha ez be van kapcsolva, akkor a Ledgerben nem l&#xE9;tez&#x151; szolg&#xE1;ltat&#xE1;sokat beimport&#xE1;lja a modul a Magent&#xF3;b&#xF3;l.&#xD;
+&#xD;
+* Csak a regisztr&#xE1;lt v&#xE1;s&#xE1;rl&#xF3;k import&#xE1;l&#xE1;sa -&gt; Import&#xE1;lni csak regisztr&#xE1;lt v&#xE1;s&#xE1;rl&#xF3;t lehet, vend&#xE9;get nem.&#xD;
+&#xD;
+* Alap &#xC1;FA-oszt&#xE1;lyok be&#xE1;ll&#xED;t&#xE1;sa a felhaszn&#xE1;l&#xF3; import&#xE1;l&#xE1;sakor -&gt; Ezek az &#xC1;FA-oszt&#xE1;lyok lesznek be&#xE1;ll&#xED;tva a felhaszn&#xE1;l&#xF3;nak import&#xE1;l&#xE1;s ut&#xE1;n. Sz&#xE1;zal&#xE9;k n&#xE9;lk&#xFC;l kell megadni, vessz&#x151;vel elv&#xE1;lasztva. Pl. 5,25,27&#xD;
+&#xD;
+* &#xC1;FA-oszt&#xE1;ly be&#xE1;ll&#xED;t&#xE1;sa szolg&#xE1;ltat&#xE1;s import&#xE1;l&#xE1;sakor -&gt; Ezen &#xC1;FA-oszt&#xE1;ly lesznek be&#xE1;ll&#xED;tva a szolg&#xE1;&#x171;ltat&#xE1;s import&#xE1;l&#xE1;s ut&#xE1;n. Sz&#xE1;zal&#xE9;k n&#xE9;lk&#xFC;l kell megadni. Pl. 27&#xD;
+&#xD;
+* VTSZ/SZJ sz&#xE1;m szolg&#xE1;ltat&#xE1;s import&#xE1;l&#xE1;sakor -&gt; Ezen VTSZ/SZJ sz&#xE1;mmal lesz beimport&#xE1;lva az &#xFA;j szolg&#xE1;ltat&#xE1;s.&#xD;
+&#xD;
+* E-mail c&#xED;m import&#xE1;l&#xE1;sa -&gt; Import&#xE1;lja-e az e-mail c&#xED;met a Ledgerbe a modul&#xD;
+&#xD;
+* Telefonsz&#xE1;m &#xE9;s faxsz&#xE1;m import&#xE1;l&#xE1;sa -&gt; Import&#xE1;lja-e a telefonsz&#xE1;mot &#xE9;s a faxsz&#xE1;mot a Ledgerbe a modul&#xD;
+&#xD;
+* Ledger hosztn&#xE9;v -&gt; A Ledger hosztneve (http:// NEM kell el&#xE9;)&#xD;
+&#xD;
+* Ledger kontext -&gt; Tipikusan "/ledger/"&#xD;
+&#xD;
+* Ledger szerver id&#x151;t&#xFA;ll&#xE9;p&#xE9;se (perc) -&gt; timeout &#xE9;rt&#xE9;ke, tipikusan 15-20 perc, ink&#xE1;bb legyen kisebb, a h&#xE1;tt&#xE9;rben a kiterjeszt&#xE9;s &#xFA;gyis elv&#xE9;gzi a logint.&#xD;
+&#xD;
+* Ledger felhaszn&#xE1;l&#xF3;n&#xE9;v -&gt; Felhaszn&#xE1;l&#xF3;, akinek a nev&#xE9;ben a kiterjeszt&#xE9;s haszn&#xE1;lja a Ledgert.&#xD;
+&#xD;
+* Ledger jelsz&#xF3; -&gt; A felhaszn&#xE1;l&#xF3;hoz tartoz&#xF3; jelsz&#xF3;.&#xD;
+&#xD;
+* Ledger b&#xF6;ng&#xE9;sz&#x151; sztring -&gt; UserAgent, amivel a kiterjeszt&#xE9;s azonos&#xED;tja mag&#xE1;t a Ledger fel&#xE9;. Tetsz&#x151;leges lehet.&#xD;
+&#xD;
+* Footer -&gt; A sz&#xE1;ml&#xE1;nak tetsz&#x151;leges l&#xE1;bl&#xE9;cet lehet adni. Ezt a Magento admin fel&#xFC;let&#xE9;n &#xE1;ruh&#xE1;zank&#xE9;nt k&#xFC;l&#xF6;n is lehet &#xE1;ll&#xED;tani.&#xD;
+&#xD;
+* Ledger-DB felhaszn&#xE1;l&#xF3;n&#xE9;v -&gt; A Ledger-DB felhaszn&#xE1;l&#xF3;neve.&#xD;
+&#xD;
+* Ledger-DB jelsz&#xF3; -&gt; DB jelsz&#xF3;.&#xD;
+&#xD;
+* Ledger-DB n&#xE9;v -&gt; A Ledger-DB neve.&#xD;
+&#xD;
+* Ledger-DB hoszt/IP -&gt; A Ledger-DB-t futtat&#xF3; hoszt neve vagy IP-c&#xED;me.&#xD;
+&#xD;
+* Ledger-DB port -&gt; A Ledger-DB portja.&#xD;
+&#xD;
+* K&#xF3;dlap -&gt; A Ledger &#xE1;ltal haszn&#xE1;lt k&#xF3;dlap. Latin2-es (ISO-8859-2) be&#xE1;ll&#xED;t&#xE1;s eset&#xE9;n a modul konvert&#xE1;lja a sz&#xF6;vegeket az UTF-8-as Magento &#xE9;s a Ledger k&#xF6;z&#xF6;tt.&#xD;
+&#xD;
+* &#xC1;tmeneti k&#xF6;nyvt&#xE1;r -&gt; Munkak&#xF6;nyvt&#xE1;r a sz&#xE1;ml&#xE1;k &#xF6;sszef&#x171;z&#xE9;s&#xE9;hez, a debugf&#xE1;jl t&#xE1;rol&#xE1;s&#xE1;hoz.&#xD;
+&#xD;
+* Hibakeres&#xE9;s -&gt; A hibakeres&#xE9;s bekapcsol&#xE1;sa vagy tilt&#xE1;sa.&#xD;
+&#xD;
+* Bankk&#xE1;rty&#xE1;s fizet&#xE9;sek -&gt; Bankk&#xE1;rty&#xE1;s fizet&#xE9;s(ek) azonos&#xED;t&#xE1;sa a Magent&#xF3;ban. Az ilyen fizet&#xE9;seket kezeli a modul bankk&#xE1;rty&#xE1;s fizet&#xE9;sk&#xE9;nt.&#xD;
+&#xD;
+&#xD;
+A Ledger admin fel&#xFC;let&#xE9;n is kell konfigur&#xE1;lni. Annak a felhaszn&#xE1;l&#xF3;nak a t&#xF6;rzsadatain&#xE1;l kell &#xE1;ll&#xED;tani, amely nev&#xE9;ben a modul dolgozik.&#xD;
+* A p&#xE9;ld&#xE1;nysz&#xE1;mot be kell &#xE1;ll&#xED;tani. Praktikusan 2-re, hiszen 2 p&#xE9;ld&#xE1;nyban kell majd nyomtatni.&#xD;
+&#xD;
+&#xD;
+TODO&#xD;
+&#xD;
+* SSL-kommunik&#xE1;ci&#xF3; megval&#xF3;s&#xED;t&#xE1;sa a Ledgerrel&#xD;
+&#xD;
+&#xD;
+Garancia&#xD;
+&#xD;
+A LEDGERINVOICE MAGENTO-KITERJESZT&#xC9;S M&#x170;K&#xD6;D&#xC9;S&#xC9;&#xC9;RT A FEJLESZT&#x150; SEMMILYEN GARANCI&#xC1;T NEM V&#xC1;LLAL,  A KITERJESZT&#xC9;ST MINDENKI SAJ&#xC1;T FELEL&#x150;SS&#xC9;G&#xC9;RE HASZN&#xC1;LJA!</description>
+    <notes>Fixing admin redirect. / Admin oldali &#xE1;tir&#xE1;ny&#xED;t&#xE1;s jav&#xED;t&#xE1;sa.</notes>
+    <authors><author><name>Zsolt KOZAK</name><user>kozakzs</user><email>kozakzs@gmail.com</email></author></authors>
+    <date>2013-05-30</date>
+    <time>12:25:21</time>
+    <contents><target name="magecommunity"><dir name="ZsoltNet"><dir name="LedgerInvoice"><dir name="Block"><dir name="Sales"><dir name="Order"><file name="Grid.php" hash="b1e01d77ca4715d91d137c7177bffe6b"/><file name="View.php" hash="bd9153fcb7991a46b49fa3e94d22e7dc"/></dir></dir></dir><dir name="Helper"><file name="Data.php" hash="69020a8162dc799cc38b164a38e299ae"/></dir><dir name="Model"><dir name="Mysql4"><dir name="Order"><file name="Invoice.php" hash="d306a68196e0c5f9414ae5c3b7df5aea"/></dir></dir><dir name="System"><dir name="Config"><dir name="Source"><file name="Charset.php" hash="c307321fe8dd5c207875b9121cce1edf"/></dir></dir></dir></dir><dir name="controllers"><file name="HttpClient.class.php" hash="a76d00eacf8f07be342b41df83f0f062"/><file name="InvoiceController.php" hash="11b94cbed414becc751d1599156c0110"/><file name="db_pg.php" hash="467a0459b1b36ab45568a85c5b3c65e8"/><dir name="pdf"><file name="concat_pdf.php" hash="7679aec4c1f9932cf436f738ac3c79a5"/><dir name="filters"><file name="FilterASCII85.php" hash="277bd932f5016a7cd1196bd782bde05f"/><file name="FilterASCII85_FPDI.php" hash="e74e259d283863f3d562bcc23e0438a5"/><file name="FilterLZW.php" hash="b621e357f3f066b6255e2cfd5626dcd9"/><file name="FilterLZW_FPDI.php" hash="35b5d8194d4779ec2dc373ed5772876e"/></dir><dir name="font"><file name="courier.php" hash="fc24409ed4079afe5a49dc21bfc18dc6"/><file name="desktop.ini" hash="c8595cf1e4e6603719df1cfc48d43fa4"/><file name="helvetica.php" hash="18a86c71e4288c7cfe6ad5116fe097c3"/><file name="helveticab.php" hash="536316f08a186e84a7c43cad3c09a1a5"/><file name="helveticabi.php" hash="8ebacb40c1a5f8a65cb311d6bd131216"/><file name="helveticai.php" hash="54e8686215214fc28e4a1eb9e9a3b05b"/><dir name="makefont"><file name="cp1250.map" hash="8a021bf2c9796273f4b2c3824efefc1d"/><file name="cp1251.map" hash="ee2f10b8198819a33d4aa566a7df4ec6"/><file name="cp1252.map" hash="8d7358daa8b750747694e822111898f9"/><file name="cp1253.map" hash="907301f283e7457d037fee0adb5ce187"/><file name="cp1254.map" hash="46e48666d54b3bc0d7eba59e1fc768f3"/><file name="cp1255.map" hash="c469cfdac7010e50b7fbcabaaf1393b1"/><file name="cp1257.map" hash="fe87c493f46ddfd8b57212cbc52e25ac"/><file name="cp1258.map" hash="86a4dee852783cc5b85ac83a82729d47"/><file name="cp874.map" hash="4fbafebd9ea29f4e10889749ec414113"/><file name="iso-8859-1.map" hash="53bffea6677269f073516bb10d28de02"/><file name="iso-8859-11.map" hash="83ecaf01ee009dc60c74e4fdaff0aa26"/><file name="iso-8859-15.map" hash="3d09f07dd446c6a2fc13a609c084e854"/><file name="iso-8859-16.map" hash="b56b0749d1ac137491e3714039009960"/><file name="iso-8859-2.map" hash="47507c221cb986421905861794102889"/><file name="iso-8859-4.map" hash="0355d40c58aa1db273ced4e7697b15b0"/><file name="iso-8859-5.map" hash="82a2003dbd3b5e359ea6b19898d4bc89"/><file name="iso-8859-7.map" hash="d0712d80739797b3495f67490d328d08"/><file name="iso-8859-9.map" hash="8647a52d390b37e26ed05e5ed6793b76"/><file name="koi8-r.map" hash="04f520a75d940d47dec77f1cc0539fbb"/><file name="koi8-u.map" hash="9046b7222af56cb6bbc349cac9dbabdf"/><file name="makefont.php" hash="fd9cb1c061b332b05bfa4ba8fde0ca3f"/></dir><file name="symbol.php" hash="56b0bdc3e447810455731272a60bb343"/><file name="times.php" hash="bbf949b03a5c8e5095b8c712de28856d"/><file name="timesb.php" hash="6704a156b70e2c1cca70b2764563b934"/><file name="timesbi.php" hash="72952b50ab13815c82aa984d76516e13"/><file name="timesi.php" hash="4ff5b220d7c754e2150c2d0ab7f7a499"/><file name="zapfdingbats.php" hash="05296fa60133b7a415237b2083f1a748"/></dir><file name="fpdf.php" hash="67dc3c1ca8030c0d03bd1e6165095b36"/><file name="fpdf_tpl.php" hash="3e0c99705b5e2a6ce3a310ffb3e63be7"/><file name="fpdi.php" hash="463f986c1e95302fdd045b956e0b2865"/><file name="fpdi2tcpdf_bridge.php" hash="28e0a17da715fe788647f5ef422575b5"/><file name="fpdi_pdf_parser.php" hash="d317e3a9f73aa04ece72eba687dfaef0"/><file name="pdf_context.php" hash="a0e004618db109c79e7504d3c9fe4c8b"/><file name="pdf_parser.php" hash="fbd3aae9059ec9c752c34366e9ef8ca7"/><file name="rotation.php" hash="a669ebb7f4f27334b0e0f60023663e17"/></dir><file name="simple_html_dom.php" hash="6a81f57652019a0a8e95eb6250d9ae49"/></dir><dir name="etc"><file name="config.xml" hash="f38815491d2bfc02801fc0d894468b7c"/><file name="system.xml" hash="2d8b43ca822adb45c3f673abf64b0fa5"/></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="ZsoltNet_LedgerInvoice.xml" hash="3772d189e5968e2746ade1edbea2a8ad"/></dir></target><target name="magelocale"><dir name="hu_HU"><file name="ZsoltNet_LedgerInvoice.csv" hash="e51ca5c1a4f5d2c9eda29c463829f722"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

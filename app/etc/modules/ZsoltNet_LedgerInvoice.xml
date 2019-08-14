@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <ZsoltNet_LedgerInvoice>
+            <active>true</active>
+            <codePool>community</codePool>
+        </ZsoltNet_LedgerInvoice>
+    </modules>
+</config>
