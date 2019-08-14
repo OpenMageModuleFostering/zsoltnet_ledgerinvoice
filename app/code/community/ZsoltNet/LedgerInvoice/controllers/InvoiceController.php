@@ -2,9 +2,10 @@
 require_once('HttpClient.class.php');
 require_once('simple_html_dom.php');
 require_once('db_pg.php');
-require_once('pdf/concat_pdf.php');
-require_once('pdf/fpdf.php');
-require_once('pdf/fpdi.php');
+require_once('tcpdf/concat_pdf.php');
+require_once('tcpdf/tcpdf.php');
+require_once('tcpdf/tcpdi.php');
+
 
 class ZsoltNet_LedgerInvoice_InvoiceController extends Mage_Adminhtml_Controller_Action
 {
@@ -904,17 +905,20 @@ class ZsoltNet_LedgerInvoice_InvoiceController extends Mage_Adminhtml_Controller
             fwrite($file,$content);
             fclose($file);
 
-            $pdf        = new FPDI();
+            $pdf        = new TCPDI(PDF_PAGE_ORIENTATION, PDF_UNIT, PDF_PAGE_FORMAT, true, 'UTF-8', false);
+            $pdf->setPrintHeader(false);
+            $pdf->setPrintFooter(false);
             $pagecount  = $pdf->setSourceFile($tempfile);
             $i          = 0;
             while($i<$pagecount) {
-                $tplidx     = $pdf->importPage(++$i, '/MediaBox');
+                $tplidx = $pdf->importPage(++$i);
                 if (!$tplidx) {
                     break;
                 }
                 $pdf->addPage();
                 $pdf->useTemplate($tplidx, 0, 0, 210);
             }
+
             unlink($tempfile);
             return $pdf;
         }

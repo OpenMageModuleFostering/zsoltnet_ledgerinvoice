@@ -436,7 +436,7 @@
                         <debug translate="label">
                             <label>Debug</label>
                             <comment>
-                            <![CDATA[Hibakeresés üzemmód bekapcsolása.]]>
+                            <![CDATA[Hibakeresés üzemmód bekapcsolása. Az 'Átmeneti könyvtárban' készül naplófájl 'ledgerinvoice_debug.log' néven.]]>
                             </comment>
                             <frontend_type>select</frontend_type>
                             <source_model>adminhtml/system_config_source_enabledisable</source_model>
