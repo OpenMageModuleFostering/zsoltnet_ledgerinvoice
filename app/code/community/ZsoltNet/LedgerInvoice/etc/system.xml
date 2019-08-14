@@ -111,6 +111,17 @@
                             <show_in_website>1</show_in_website>
                             <show_in_store>1</show_in_store>
                         </inpersonshippingmethod>
+                        <codmethod translate="label">
+                            <label>Utánvét fizetési metódus</label>
+                            <comment>
+                            <![CDATA[Az utánvét fizetési metódusa az áruházban. (1.8 előtti Magento esetében 'cashondelivery', 1.8+ esetében 'phoenix_cashondelivery')]]>
+                            </comment>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>65</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </codmethod>
                         <tax_5 translate="label">
                             <label>5%-os ÁFA-kódja</label>
                             <comment>

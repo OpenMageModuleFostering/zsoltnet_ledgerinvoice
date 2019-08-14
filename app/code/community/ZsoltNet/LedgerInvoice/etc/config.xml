@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ZsoltNet_LedgerInvoice>
-            <version>0.9.6</version>
+            <version>0.9.7</version>
         </ZsoltNet_LedgerInvoice>
     </modules>
     <admin>
@@ -89,6 +89,7 @@
                 <discountcode>000000</discountcode>
                 <bpiocode>000005</bpiocode>
                 <inpersonshippingmethod>flatrate_flatrate</inpersonshippingmethod>
+                <codmethod>phoenix_cashondelivery</codmethod>
                 <tax_5>4672</tax_5>
                 <tax_18>4674</tax_18>
                 <tax_25>4671</tax_25>

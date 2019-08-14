@@ -820,7 +820,7 @@ class ZsoltNet_LedgerInvoice_InvoiceController extends Mage_Adminhtml_Controller
         }
 
         $trans = $postArray['transdate'];
-        if ($method=='cashondelivery') {
+        if ($method==Mage::getStoreConfig('ledgerinvoicemodule/ledgerinvoice/codmethod')) {
             //utanvetel, ezert masok a datumok
             $postArray['shipvia']   = $this->texts["utanvet"];
             $postArray['transdate'] = date("Y-m-d",strtotime($trans)+Mage::getStoreConfig('ledgerinvoicemodule/ledgerinvoice/codtrans')*24*60*60);
