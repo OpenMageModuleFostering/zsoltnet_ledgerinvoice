@@ -2,7 +2,7 @@
 <config>
     <modules>
         <ZsoltNet_LedgerInvoice>
-            <version>0.9.3</version>
+            <version>0.9.4</version>
         </ZsoltNet_LedgerInvoice>
     </modules>
     <admin>
@@ -17,6 +17,17 @@
         </routers>
     </admin>
     <adminhtml>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <ledgerinvoice>
+                        <type>singleton</type>
+                        <class>ledgerinvoice/observer</class>
+                        <method>addMassActionAddLedgerImport</method>
+                    </ledgerinvoice>
+                </observers>
+            </core_block_abstract_to_html_before>
+        </events>
         <translate>
             <modules>
                 <ZsoltNet_LedgerInvoice>
@@ -65,14 +76,6 @@
                 </rewrite>
             </sales_mysql4>
         </models>
-        <blocks>
-            <adminhtml>
-                <rewrite>
-                    <sales_order_view>ZsoltNet_LedgerInvoice_Block_Sales_Order_View</sales_order_view>
-                    <sales_order_grid>ZsoltNet_LedgerInvoice_Block_Sales_Order_Grid</sales_order_grid>
-                </rewrite>
-            </adminhtml>
-        </blocks>
     </global>
     <default>
         <ledgerinvoicemodule>
