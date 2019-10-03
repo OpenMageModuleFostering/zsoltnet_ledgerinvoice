@@ -1,3 +1,5 @@
+
+
 ## Original Package Description
 
 This extension connects the Ledger ERP software of Távügyvitel Kft. (http://www.tavugyvitel.hu/) to the Magento Commerce webshop. The Ledger ERP software is a Hungarian software, so details are in Hungarian only.
