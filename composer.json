@@ -1,7 +1,7 @@
 {
     "name": "openmage-module-fostering\/zsoltnet_ledgerinvoice",
     "type": "magento-module",
-    "license": "Open-Software-License-(OSL)",
+    "license": "OSL-3.0",
     "homepage": "",
     "description": "This extension connects the Ledger ERP software of T\u00e1v\u00fcgyvitel Kft. (http:\/\/www.tavugyvitel.hu\/) to the Magento Commerce webshop. The Ledger ERP software is a Hungarian software, so details are in Hungarian only.\n\nEz a kiterjeszt\u00e9s a T\u00e1v\u00fcgyvitel Kft. (http:\/\/www.tavugyvitel.hu\/) \u00e1ltal forgalmazott Ledger integr\u00e1lt \u00fcgyviteli szoftver \u00e9s a Magento Commerce webshop \u00f6sszekapcsol\u00e1s\u00e1ra szolg\u00e1l.",
     "authors": [
